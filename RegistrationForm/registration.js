@@ -13,7 +13,7 @@ const RegistrationForm = () => {
     firstName: '', email: '', studentId: '',
   });
 
-  const [showAlert, setShowAlert] = useState(false);  // State to control alert visibility
+  const [showAlert, setShowAlert] = useState(false); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +48,6 @@ const RegistrationForm = () => {
 
     setErrors(newErrors);
 
-    // Show alert if validation fails
     if (!isValid) {
       setShowAlert(true);
     }
@@ -61,7 +60,7 @@ const RegistrationForm = () => {
 
     if (validateForm()) {
       console.log('Form submitted successfully:', formData);
-      setShowAlert(false);  // Reset alert if submission is successful
+      setShowAlert(false); 
     } else {
       console.log('Form has errors, please correct them before submitting');
     }
